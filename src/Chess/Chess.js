@@ -6,6 +6,7 @@ class Chess extends Component {
   render() {
     return (
         <div className="Chess col-xs-8 col-custom-eight">
+
         </div>
     );
   }

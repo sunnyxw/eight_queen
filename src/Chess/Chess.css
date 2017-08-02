@@ -9,3 +9,7 @@
 .col-custom-eight{
     width:12.5% !important;
 }
+
+.Chess:hover{
+    background-color: yellow;
+}

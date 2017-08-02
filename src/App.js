@@ -4,21 +4,23 @@ import Chess from './Chess/Chess'
 import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
 class App extends Component {
-  render() {
-    var chessBoard=[];
-    for(var i=0;i<8;i++)
-      {
-        var chessColumn=[];
-          for(var j=0;j<8;j++)
+  renderChessBoard(){
+      var chessBoard=[];
+          for(var i=0;i<8;i++)
             {
-              chessColumn.push(<Chess />);
-            }
-        chessBoard.push(chessColumn);
-      }
-
+              var chessColumn=[];
+                for(var j=0;j<8;j++)
+                  {
+                    chessColumn.push(<Chess />);
+                  }
+              chessBoard.push(chessColumn);
+        }
+      return chessBoard;
+  }
+  render() {
     return (
       <div className="container">
-        {chessBoard}
+        {this.renderChessBoard()}
       </div>
     );
   }
