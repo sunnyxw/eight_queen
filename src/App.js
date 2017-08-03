@@ -11,11 +11,11 @@ class App extends Component {
               var chessColumn=[];
                 for(var j=0;j<8;j++)
                   {
-                    var position = Object.create({x:i, y:j});
-                    chessColumn.push(<Chess position/>);
+                    var position={x:i, y:j};
+                    chessColumn.push(<Chess position={position}/>);
                   }
               chessBoard.push(chessColumn);
-        }
+            }
       return chessBoard;
   }
   render() {
