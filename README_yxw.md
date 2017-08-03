@@ -25,4 +25,6 @@ A2: var position = {x:1, y:2};
 Q3: how to add event handler?
 A3:https://facebook.github.io/react/docs/handling-events.html 
 
+Q4: function is defined above render. constructor should bind this.
+But why and how to use constructor.
 """

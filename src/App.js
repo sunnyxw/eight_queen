@@ -4,6 +4,7 @@ import Chess from './Chess/Chess'
 import { Navbar, Jumbotron, Button } from 'react-bootstrap';
 
 class App extends Component {
+  
   renderChessBoard(){
       var chessBoard=[];
           for(var i=0;i<8;i++)
