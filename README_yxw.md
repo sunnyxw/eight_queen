@@ -27,4 +27,8 @@ A3:https://facebook.github.io/react/docs/handling-events.html
 
 Q4: function is defined above render. constructor should bind this.
 But why and how to use constructor.
+
+Day3:
+when clicked, toggle background-color of chess.
+pay attention to html css inline setting. Also, remember "setState".
 """
