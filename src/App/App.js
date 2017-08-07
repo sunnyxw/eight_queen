@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import Chess from './Chess/Chess'
-import { Navbar, Jumbotron, Button } from 'react-bootstrap';
+import Chess from '../Chess/Chess'
 
 class App extends Component {
-  
+  constructor(props){
+    super(props);
+    this.renderChessBoard=this.renderChessBoard.bind(this);
+    this.state={
+      queenList:[],
+      position:{},
+    };
+  }
   renderChessBoard(){
       var chessBoard=[];
           for(var i=0;i<8;i++)
@@ -12,8 +18,8 @@ class App extends Component {
               var chessColumn=[];
                 for(var j=0;j<8;j++)
                   {
-                    var position={x:i, y:j};
-                    chessColumn.push(<Chess position={position}/>);
+                    this.state.position={x:i, y:j};
+                    chessColumn.push(<Chess position={this.state.position} queenList={this.state.queenList}/>);
                   }
               chessBoard.push(chessColumn);
             }
