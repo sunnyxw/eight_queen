@@ -20,7 +20,6 @@ class Chess extends Component {
   }
 
   toggleChess() {
-    console.log("toggle");
     var x = this.props.position.x;
     var y = this.props.position.y;
     if (this.state.flag == 0) {
@@ -37,17 +36,20 @@ class Chess extends Component {
   }
 
   watchQueenList() {
-    var x = this.props.position.x;
-    var y = this.props.position.y;
+    var sig = 0;
     if (this.props.queenList.length == 8) {
       console.log(this.props.queenList);
-      console.log({x, y});
-      if ({ x, y } in this.props.queenList) {
-        console.log("please be white");
-        this.toggleChess();
+      console.log(this.props.position);
+      for(var i=0; i<8;i++){
+          if (this.props.position.x == this.props.queenList[i].x
+          && this.props.position.y == this.props.queenList[i].y){
+            this.toggleChess();
+            sig = 1;
+            break;
+          }
       }
-      else {
-        alert("please uncheck one yellow box first!");
+      if(sig == 0){
+            alert("please uncheck one yellow box first!");
       }
     }
     else {
