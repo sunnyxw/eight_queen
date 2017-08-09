@@ -15,8 +15,11 @@ class Chess extends Component {
 
   handleClick(e) {
     e.preventDefault();
+    console.log(this.props.queenList.length);
     this.watchQueenList();
-    console.log(this.props.position.x, this.props.position.y);
+    console.log(this.props.queenList);
+    console.log(this.props.position);
+    console.log(this.props.queenList.length);
   }
 
   toggleChess() {
@@ -24,35 +27,38 @@ class Chess extends Component {
     var y = this.props.position.y;
     if (this.state.flag == 0) {
       this.setState({ color: "yellow" });
-      this.setState({flag: 1});
-      this.props.queenList.push({x, y});
+      this.setState({ flag: 1 });
+      this.props.queenList.push({ x, y });
     }
     else {
       this.setState({ color: "white" });
-      this.setState({flag: 0});
-      var index = this.props.queenList.indexOf({x, y});
-      this.props.queenList.splice(index, 1);
+      this.setState({ flag: 0 });
+      for (var i = 0; i < 8; i++) {
+        if (this.props.position.x == this.props.queenList[i].x
+          && this.props.position.y == this.props.queenList[i].y) {
+          this.props.queenList.splice(i, 1);
+          break;
+        }
+      }
     }
   }
 
   watchQueenList() {
     var sig = 0;
     if (this.props.queenList.length == 8) {
-      console.log(this.props.queenList);
-      console.log(this.props.position);
-      for(var i=0; i<8;i++){
-          if (this.props.position.x == this.props.queenList[i].x
-          && this.props.position.y == this.props.queenList[i].y){
-            this.toggleChess();
-            sig = 1;
-            break;
-          }
+      for (var i = 0; i < 8; i++) {
+        if (this.props.position.x == this.props.queenList[i].x
+          && this.props.position.y == this.props.queenList[i].y) {
+          this.toggleChess();
+          sig = 1;
+          break;
+        }
       }
-      if(sig == 0){
-            alert("please uncheck one yellow box first!");
+      if (sig == 0) {
+        alert("please uncheck one yellow box first!");
       }
     }
-    else {
+    else if (this.props.queenList.length < 8) {
       this.toggleChess();
     }
   }

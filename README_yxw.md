@@ -31,4 +31,29 @@ But why and how to use constructor.
 Day3:
 when clicked, toggle background-color of chess.
 pay attention to html css inline setting. Also, remember "setState".
+
+Day4:
+add queen_list in setState. Limit length to 8. If it is to exceed 8, throw out
+an alert. console.log queen_list.
+
+Q1: position ={x, y}. How to check if {x, y} exists in queen_list?
+A1: if i use: this.props.queenList.indexOf({x, y}), it doesn't work.
+in other words, the following code return False:
+    var a = {x:1, y:1};
+    var b = [{x:1, y:1}, {x:2, y:2}];
+    console.log((a in b)||(a == b[0]);
+
+i'm using a very primitive way:
+    var exist = False;
+    for(var i=0;i< b.length;i++){
+        if ((a.x == b[i].x)&&(a.y == b[i].y){
+            exist =  True;
+            break;
+        }
+    }
+    return exist;    
+
+Q2: how to remove an element in array in js?
+A2: to remove element queenList[index]:
+        this.props.queenList.splice(index, 1)
 """
