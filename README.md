@@ -36,11 +36,14 @@ O1: add hover effect for chessboard cells.
 O2: add cell ID for each div. Console.log the id # when cell is clicked.
 
 Q1: create obj: 
+
 ```javascript
     var hdd={name:"xiaoming",iq:0.2,hobbies:[sleep, running]};
 ```
 Q2: how to pass obj to html element?
+
 A2: 
+
 ```javascript
     var position = {x:1, y:2};
     <Chess position={position}/>
@@ -51,7 +54,7 @@ A2:
 
 
 ```javascript
-<   Chess position={{x:1, y:2}}/>
+    <Chess position={{x:1, y:2}}/>
 ```
 
 Q3: how to add event handler?
