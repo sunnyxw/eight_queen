@@ -56,4 +56,27 @@ i'm using a very primitive way:
 Q2: how to remove an element in array in js?
 A2: to remove element queenList[index]:
         this.props.queenList.splice(index, 1)
+
+Day5:
+add a flask backend server. get Queen_list from front panel. 
+
+Q1: crossOrigin.
+https://flask-cors.readthedocs.io/en/latest/ 
+
+Q2: button in bootstrap.
+A2: pay attention to terms:
+    className instead of class; onClick instead of onclick
+
+Q3: axios doesn't quite work.
+A3: No need to jsonify queenlist before axios.post.Otherwise, the data format would be messed up. Cannot make sure if axios.post automatically transfer data into json format. needs to be verified.
+
+Day6:
+pylint has many required formats. pay attention.
+
+Q1: how to alert response from app.js?
+A1:     axios.post(url, data)
+        .then((response)=>{
+          console.log(response);
+          alert(response.data);
+        });
 """
