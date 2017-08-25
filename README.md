@@ -124,6 +124,7 @@ A3: No need to jsonify queenlist before axios.post.Otherwise, the data format wo
 pylint has many required formats. pay attention.
 
 Q1: how to alert response from app.js?
+
 A1:     
 ```javascript
     axios.post(url, data)
