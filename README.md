@@ -12,7 +12,7 @@
 3. in eight_queen > executor: python getList.py
 4. open localhost:3000, click squares, and hit "submit" button.
 
-## Day1:
+## Day 1:
 ```bash
 $ npm install -g create-react-app
 $ create-react-app eight-queen
@@ -30,8 +30,8 @@ Q2. bootstrap has 12 grids a row. Can't get 8.
 
 A2.http://www.uakron.edu/it/cms/responsive-guide/gridding/five-col.dot 
 
-## Day2:
-objectives:
+## Day 2:
+####objectives:
 
 - O1: add hover effect for chessboard cells.
 
@@ -67,11 +67,11 @@ Q4: function is defined above render. constructor should bind this.
 
 But why and how to use constructor.
 
-## Day3:
+## Day 3:
 when clicked, toggle background-color of chess.
 pay attention to html css inline setting. Also, remember "setState".
 
-## Day4:
+## Day 4:
 add queen_list in setState. Limit length to 8. If it is to exceed 8, throw out
 an alert. console.log queen_list.
 
@@ -104,7 +104,7 @@ A2: to remove element queenList[index]:
     this.props.queenList.splice(index, 1)
 ```
 
-## Day5:
+## Day 5:
 Add a flask backend server. get Queen_list from front panel. 
 
 Q1: crossOrigin.
@@ -120,7 +120,7 @@ Q3: axios doesn't quite work.
 
 A3: No need to jsonify queenlist before axios.post.Otherwise, the data format would be messed up. Cannot make sure if axios.post automatically transfer data into json format. needs to be verified.
 
-## Day6:
+## Day 6:
 pylint has many required formats. pay attention.
 
 Q1: how to alert response from app.js?
