@@ -21,6 +21,7 @@ $ npm install --save bootstrap
 ```
 
 Problem encountered:
+
 Q1. react-bootstrap not working.
 
 A1.https://github.com/facebookincubator/create-react-app/issues/301 
@@ -31,14 +32,15 @@ A2.http://www.uakron.edu/it/cms/responsive-guide/gridding/five-col.dot
 
 ## Day2:
 objectives:
-O1: add hover effect for chessboard cells.
 
-O2: add cell ID for each div. Console.log the id # when cell is clicked.
+- O1: add hover effect for chessboard cells.
+
+- O2: add cell ID for each div. Console.log the id # when cell is clicked.
 
 Q1: create obj: 
 
 ```javascript
-    var hdd={name:"xiaoming",iq:0.2,hobbies:[sleep, running]};
+    var hdd={name:"xiaoming",iq:0.2,hobbies:[sleeping, running]};
 ```
 Q2: how to pass obj to html element?
 
@@ -103,7 +105,7 @@ A2: to remove element queenList[index]:
 ```
 
 ## Day5:
-add a flask backend server. get Queen_list from front panel. 
+Add a flask backend server. get Queen_list from front panel. 
 
 Q1: crossOrigin.
 
