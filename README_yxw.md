@@ -1,4 +1,17 @@
 """
+How to run the program?
+1. installation necessary tools:
+    npm install
+    axios
+    react
+    react-bootstrap
+    bootstrap
+    flask
+
+2. in eight_queen > frontEnd: npm start
+3. in eight_queen > executor: python getList.py
+4. open localhost:3000, click squares, and hit "submit" button.
+
 Day1:
 npm install -g create-react-app
 create-react-app eight-queen
