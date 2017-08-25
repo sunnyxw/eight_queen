@@ -31,7 +31,7 @@ Q2. bootstrap has 12 grids a row. Can't get 8.
 A2.http://www.uakron.edu/it/cms/responsive-guide/gridding/five-col.dot 
 
 ## Day 2:
-####objectives:
+#### Objectives:
 
 - O1: add hover effect for chessboard cells.
 
